@@ -9,5 +9,12 @@ module Przelewy24Payment
       app.config.spree.payment_methods << Spree::PaymentMethod::P24Payment
     end
 
+    config.to_prepare do
+      #loads application's model / class decorators
+      Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|
+        Rails.application.config.cache_classes ? require(c) : load(c)
+      end
+
+    end
   end
 end
