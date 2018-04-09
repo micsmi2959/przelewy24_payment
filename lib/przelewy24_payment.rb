@@ -1,3 +1,4 @@
+require 'spree_core'
 require "przelewy24_payment/version"
 require "przelewy24_payment/engine"
 require "przelewy24_payment/przelewy24_payment_controller"
