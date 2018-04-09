@@ -1,3 +1,3 @@
 module Przelewy24Payment
-  VERSION = "0.2.7"
+  VERSION = "0.2.6"
 end
